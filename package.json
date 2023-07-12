@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "tailwind": "tailwindcss -i ./app/assets/stylesheets/raw.css -o ./app/assets/stylesheets/application.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}

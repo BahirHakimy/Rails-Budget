@@ -1,0 +1,34 @@
+<h2 class="text-2xl text-slate-600 font-bold my-2">Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :name, class:'text-gray-500 font-bold' %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"p-1 border border-gray-300 block w-full outline-[#ccf8] text-xl rounded-md shadow-md" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, class:'text-gray-500 font-bold' %><br />
+    <%= f.email_field :email, autocomplete: "email", class:"p-1 border border-gray-300 block w-full outline-[#ccf8] text-xl rounded-md shadow-md" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, class:'text-gray-500 font-bold' %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class:"p-1 border border-gray-300 block w-full outline-[#ccf8] text-xl rounded-md shadow-md" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, class:'text-gray-500 font-bold' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"p-1 border border-gray-300 block w-full outline-[#ccf8] text-xl rounded-md shadow-md" %>
+  </div>
+
+  <div class="actions flex w-full d-flex justify-center">
+    <%= f.submit "Sign up", class:'bg-sky-600 text-slate-50 p-2 mx-auto my-2 rounded-sm' %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
