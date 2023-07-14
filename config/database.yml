@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: Rails_Budget_production
-  username: Rails_Budget
+  database: dpg-chsftn5269vdk4mtdph0-a.oregon-postgres.render.com/doosti
+  username: admin
   password: <%= ENV["RAILS_BUDGET_DATABASE_PASSWORD"] %>
