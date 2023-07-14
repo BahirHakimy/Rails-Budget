@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_12_185815) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_13_173026) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,11 +23,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_12_185815) do
     t.index ["user_id"], name: "index_deals_on_user_id"
   end
 
-  create_table "deals_groups", id: false, force: :cascade do |t|
-    t.bigint "group_id", null: false
-    t.bigint "deal_id", null: false
-  end
-
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.string "icon"
@@ -35,6 +30,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_12_185815) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_groups_on_user_id"
+  end
+
+  create_table "groups_deals", force: :cascade do |t|
+    t.bigint "group_id", null: false
+    t.bigint "deal_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deal_id"], name: "index_groups_deals_on_deal_id"
+    t.index ["group_id"], name: "index_groups_deals_on_group_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,4 +56,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_12_185815) do
 
   add_foreign_key "deals", "users"
   add_foreign_key "groups", "users"
+  add_foreign_key "groups_deals", "deals"
+  add_foreign_key "groups_deals", "groups"
 end

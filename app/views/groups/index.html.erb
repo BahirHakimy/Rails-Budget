@@ -1,14 +1,9 @@
-<div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
-
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Groups</h1>
-    <%= link_to 'New group', new_group_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
-
-  <div id="groups" class="min-w-full">
+<%= render partial: "shared/navbar", locals:{title:'Groups', link: root_path} %>
+<div style="height: 582px">
+  <ul id="groups" style="height:512px; overflow:auto" class="m-0 p-0">
     <%= render @groups %>
+  </ul>
+  <div style="height:70px" class="d-flex justify-content-center align-items-center">
+  <%= link_to "New Group", new_group_path, class:"btn btn-primary px-4" %>
   </div>
 </div>
