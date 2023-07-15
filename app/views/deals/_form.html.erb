@@ -1,0 +1,11 @@
+<%= bootstrap_form_with(model: deal, class: "contents") do |form| %>
+    <%= form.text_field :name %>
+
+    <%= form.text_field :amount %>
+
+    <%= form.collection_select :group, Group.all, :id, :name, {} %>
+
+    <%= form.hidden_field :user_id, value:current_user.id%>
+
+    <%= form.submit %>
+<% end %>
