@@ -11,7 +11,7 @@ RSpec.describe Group, type: :model do
     it 'validates length of name' do
       group = Group.new(name: 'Test', icon: 'icon')
       expect(group).to_not be_valid
-      expect(group.errors[:name]).to include("is too short (minimum is 5 characters)")
+      expect(group.errors[:name]).to include('is too short (minimum is 5 characters)')
     end
 
     it 'validates presence of icon' do
