@@ -26,9 +26,6 @@
 
 **Rails Budget** A beautiful Budget app created with Ruby on Rails which is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-### Intro Video
-https://www.loom.com/share/9c9ae07f3fd84d9dadefb83b2a78248f?sid=52eb1d5e-9b6c-43fc-a0fa-7c1f03131f57
-
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -61,7 +58,7 @@ https://www.loom.com/share/9c9ae07f3fd84d9dadefb83b2a78248f?sid=52eb1d5e-9b6c-43
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live]([https://the-sky.onrender.com/](https://rails-budget-xmkh.onrender.com/))
+- [Live](https://rails-budget-xmkh.onrender.com/)
   
 ## Watch the walkthrough here:
 
