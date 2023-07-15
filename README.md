@@ -68,6 +68,14 @@
 
 To get a local copy up and running, follow these steps.
 
+### Setup
+
+Clone the repo into your local machine:
+
+```bash
+git clone https://github.com/BahirHakimy/Rails-Budget.git
+```
+
 ### Prerequisites
 
 In order to run this project you need to:
@@ -76,12 +84,12 @@ In order to run this project you need to:
 - Install [Ruby](https://rubyinstaller.org/)
 - Install [Rails](https://rubyonrails.org/)
 
-### Setup
+### Install
 
-Clone the repo into your local machine:
+To install the dependencies run the following command
 
 ```bash
-git clone https://github.com/BahirHakimy/Rails-Budget.git
+bundle install
 ```
 
 ### Usage
@@ -143,6 +151,8 @@ If you like this project leave a start for it.
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
 
 I would like to thank Microverse for helping me in my journey to become a Fullstack developer 🌹
 
