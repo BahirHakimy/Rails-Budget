@@ -6,14 +6,12 @@ databases:
 
 services:
   - type: web
-    name: rails_budget
+    name: Rails Budget
     env: ruby
     buildCommand: './render-build.sh'
     startCommand: 'bundle exec rails s'
     envVars:
       - key: DATABASE_URL
-        fromDatabase:
-          name: postgres
-          property: connectionString
+        value: 'postgres://admin:1Hv8Kq6fBBwlKEMPQOlmKb92GphIHDW7@dpg-chsftn5269vdk4mtdph0-a/doosti'
       - key: RAILS_MASTER_KEY
         sync: false
