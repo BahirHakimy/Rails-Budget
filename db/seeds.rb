@@ -7,7 +7,7 @@ users = User.create!([
 
 # Create some groups
 groups = Group.create!([
-                         { name: 'Meal', icon: 'https://cdn-icons-png.flaticon.com/512/4080/4080032.png',
+                         { name: 'Meals', icon: 'https://cdn-icons-png.flaticon.com/512/4080/4080032.png',
                            user_id: users[0].id },
                          { name: 'Traveling', icon: 'https://cdn-icons-png.flaticon.com/512/6213/6213814.png',
                            user_id: users[1].id },

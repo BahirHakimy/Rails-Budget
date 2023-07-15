@@ -12,6 +12,8 @@ services:
     startCommand: 'bundle exec rails s'
     envVars:
       - key: DATABASE_URL
-        value: 'postgres://admin:1Hv8Kq6fBBwlKEMPQOlmKb92GphIHDW7@dpg-chsftn5269vdk4mtdph0-a/doosti'
+        fromDatabase:
+          name: postgres
+          property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
