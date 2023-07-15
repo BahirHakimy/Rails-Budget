@@ -17,8 +17,6 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: postgres
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -26,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: Rails_Budget_development
+  username: postgres
+  password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,6 +60,8 @@ development:
 test:
   <<: *default
   database: Rails_Budget_test
+  username: postgres
+  password: postgres
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -83,6 +85,7 @@ test:
 #
 production:
   <<: *default
-  database: dpg-chsftn5269vdk4mtdph0-a.oregon-postgres.render.com/doosti
+  url: <%= ENV['DATABASE_URL'] %>
+  database: doosti
   username: admin
-  password: <%= ENV["RAILS_BUDGET_DATABASE_PASSWORD"] %>
+  password: 1Hv8Kq6fBBwlKEMPQOlmKb92GphIHDW7
