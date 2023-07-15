@@ -1,0 +1,9 @@
+<%= render partial: "shared/navbar", locals:{title:'Groups', link: root_path} %>
+<div style="height: 582px">
+  <ul id="groups" style="height:512px; overflow:auto" class="m-0 p-0">
+    <%= render @groups %>
+  </ul>
+  <div style="height:70px" class="d-flex justify-content-center align-items-center">
+  <%= link_to "New Group", new_group_path, class:"btn btn-primary px-4" %>
+  </div>
+</div>

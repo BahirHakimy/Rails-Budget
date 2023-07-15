@@ -1,0 +1,4 @@
+<%= render partial: "shared/navbar", locals:{title:'New Transaction', link:request.referer} %>
+<div class="container">
+    <%= render "form", deal: @deal %>
+</div>

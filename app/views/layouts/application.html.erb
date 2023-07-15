@@ -11,6 +11,29 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="d-flex justify-content-center">
+      <div class="iphone-x">
+        <div class="side">
+          <div class="screen">
+           <% if notice.present?%>
+            <p class="alert alert-info position-absolute top-0 text-center" style="width:300px"><%= notice %></p>
+          <% end %>
+          <% if alert.present?%>
+            <p class="alert alert-danger position-absolute top-0 text-center" style="width:300px"><%= alert %></p>
+          <% end %>
+          <%= yield %>  
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="header">
+          <div class="sensor-1"></div>
+          <div class="sensor-2"></div>
+          <div class="sensor-3"></div>
+        </div>
+        <div class="volume-button"></div>
+        <div class="power-button"></div>
+      </div>
+      
+    </div>
   </body>
 </html>
